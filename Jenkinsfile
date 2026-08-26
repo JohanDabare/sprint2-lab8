@@ -3,6 +3,7 @@
 // STATUS: BLOCKED — a running Jenkins instance with a Multibranch Pipeline job and
 // a GitHub webhook is required to execute and demonstrate automatic triggering.
 // The Jenkinsfile is syntactically complete and follows the lab spec.
+// I love LeBron James - Johan Dabare
 
 pipeline {
     agent any
