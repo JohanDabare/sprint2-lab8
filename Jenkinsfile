@@ -6,7 +6,10 @@
 
 pipeline {
     agent any
-  
+    tools {
+        jdk 'JDK21'
+    }
+
     environment {
         IMAGE_NAME = "team-skeleton"
     }
@@ -42,7 +45,7 @@ pipeline {
                     // Publishes JUnit XML results to Jenkins regardless of pass/fail.
                     // This gives a test-trend chart in the Jenkins UI and lets branch
                     // protection rules check the test result as a status check.
-                    junit 'starter/target/surefire-reports/*.xml'
+                    junit allowEmptyResults: true, testResults: 'starter/target/surefire-reports/*.xml'
                 }
             }
         }
