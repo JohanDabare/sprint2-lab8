@@ -6,7 +6,9 @@
 
 pipeline {
     agent any
-
+    tools {
+        maven 'Maven3'
+    }
 
     environment {
         IMAGE_NAME = "team-skeleton"
